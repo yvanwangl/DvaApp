@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import { Table, message, Popconfirm } from 'antd';
+import React, {Component, PropTypes} from 'react';
+import {Table, message, Popconfirm} from 'antd';
 require('./index.css');
 
 const UserList = ({
@@ -8,32 +8,34 @@ const UserList = ({
     loading,
     dataSource,
     onPageChange
-})=>{
+})=> {
     const columns = [
         {
-            title:'姓名',
+            title: '姓名',
             dataIndex: 'name',
             key: 'name',
             render: (text)=><a href="#">{text}</a>,
         },
         {
-            title:'年龄',
+            title: '年龄',
             dataIndex: 'age',
             key: 'age',
         },
         {
-            title:'地址',
+            title: '地址',
             dataIndex: 'address',
             key: 'address'
         },
         {
-            title:'操作',
-            key:'operation',
+            title: '操作',
+            key: 'operation',
             render: (text, record)=>(
                 <p>
-                    <a onClick={()=>{}}>编辑</a>
+                    <a onClick={()=> {
+                    }}>编辑</a>
                     &nbsp;
-                    <Popconfirm title="Confirm to delete?" onConfirm={()=>{}}>
+                    <Popconfirm title="Confirm to delete?" onConfirm={()=> {
+                    }}>
                         <a>删除</a>
                     </Popconfirm>
                 </p>
@@ -44,8 +46,8 @@ const UserList = ({
     const pagination = {
         total,
         current,
-        pageSize:10,
-        onChange:{onPageChange},
+        pageSize: 10,
+        onChange: {onPageChange},
     };
 
     return (
