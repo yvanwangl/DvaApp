@@ -9,15 +9,8 @@ import {normal, title, welcome, list} from './index.css';
 
 function Users({location, dispatch, users}) {
     const {
-        list,
-        total,
-        loading,
-        current,
-        field,
-        keyword,
-        currentItem,
-        maskVisible,
-        maskType,
+        list, total, loading, current, field, keyword,
+        currentItem, maskVisible, maskType,
     } = users;
 
     const userSearchProps = {};

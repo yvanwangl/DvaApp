@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {Table, message, Popconfirm} from 'antd';
+import {Table, Pagination, Popconfirm} from 'antd';
 require('./index.css');
 
 const UserList = ({
@@ -57,9 +57,25 @@ const UserList = ({
                 dataSource={dataSource}
                 loading={loading}
                 rowKey={record=>record.id}
-                pagination={pagination}
+                pagination={false}
+            />
+            <Pagination
+                className="ant-table-pagination"
+                total={total}
+                current={current}
+                pageSize={10}
+                onChange={onPageChange}
             />
         </div>
     );
 };
+
+UserList.propTypes={
+    onPageChange: PropTypes.func,
+    dataSource: PropTypes.array,
+    loading: PropTypes.any,
+    total: PropTypes.any,
+    current: PropTypes.any
+};
+
 export default UserList;
