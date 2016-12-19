@@ -13,7 +13,24 @@ function Users({location, dispatch, users}) {
         currentItem, maskVisible, maskType,
     } = users;
 
-    const userSearchProps = {};
+    const userSearchProps = {
+        field,
+        keyword,
+        onSearch(fieldsValue){
+            dispatch(routerRedux.push({
+                pathname:'/users',
+                query: {...fieldsValue, page:1}
+            }));
+        },
+        onAdd(){
+            dispatch({
+                type:'users/showMask',
+                payload:{
+                    maskType:'create',
+                }
+            });
+        }
+    };
     const userListProps = {
         current,
         total,

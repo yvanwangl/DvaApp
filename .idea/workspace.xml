@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7669674a-e877-449a-aa8e-1ec37d796df1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mock/users.js" afterPath="$PROJECT_DIR$/mock/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Users/UserList/UserList.jsx" afterPath="$PROJECT_DIR$/src/components/Users/UserList/UserList.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/users.js" afterPath="$PROJECT_DIR$/src/models/users.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Users/Users.jsx" afterPath="$PROJECT_DIR$/src/routes/Users/Users.jsx" />
     </list>
     <ignored path="dva-app.iws" />
@@ -150,11 +146,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="Users.jsx" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Users.jsx" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/routes/Users/Users.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="504">
-                  <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+                <state relative-caret-position="168">
+                  <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
                   <folding>
                     <element signature="e#0#50#0" expanded="true" />
                   </folding>
@@ -187,8 +183,8 @@
           <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/models/users.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1092">
-                  <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+                <state relative-caret-position="294">
+                  <caret line="67" column="16" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="16" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -196,11 +192,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="users.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mock/users.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+                <state relative-caret-position="1848">
+                  <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
                   <folding />
                 </state>
               </provider>
@@ -282,9 +278,9 @@
         <option value="$PROJECT_DIR$/src/components/Users/UserSearch/UserSearch.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/models/users.js" />
-        <option value="$PROJECT_DIR$/src/routes/Users/Users.jsx" />
         <option value="$PROJECT_DIR$/src/components/Users/UserList/UserList.jsx" />
         <option value="$PROJECT_DIR$/mock/users.js" />
+        <option value="$PROJECT_DIR$/src/routes/Users/Users.jsx" />
       </list>
     </option>
   </component>
@@ -330,7 +326,78 @@
     <panes>
       <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DvaApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DvaApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DvaApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DvaApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DvaApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DvaApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DvaApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DvaApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DvaApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="Scratches" />
     </panes>
@@ -424,7 +491,7 @@
       <updated>1481886953574</updated>
       <workItem from="1481886957046" duration="9227000" />
       <workItem from="1482070024059" duration="186000" />
-      <workItem from="1482144154633" duration="8176000" />
+      <workItem from="1482144154633" duration="8561000" />
     </task>
     <task id="LOCAL-00001" summary="modify styles">
       <created>1482070102720</created>
@@ -440,11 +507,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482070193564</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add pagination">
+      <created>1482154874098</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1482154874098</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17589000" />
+    <option name="totallyTimeSpent" value="17974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="960" height="1040" extended-state="0" />
@@ -482,7 +556,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modify styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify styles" />
+    <MESSAGE value="add pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pagination" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -850,16 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Users/UserList/UserList.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
@@ -878,21 +943,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Users/Users.jsx">
+    <entry file="file://$PROJECT_DIR$/mock/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+        <state relative-caret-position="1848">
+          <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="67" column="16" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="16" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mock/users.js">
+    <entry file="file://$PROJECT_DIR$/src/routes/Users/Users.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="168">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
