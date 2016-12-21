@@ -41,15 +41,47 @@ function Users({location, dispatch, users}) {
                 pathname:'/users',
                 query: {field, keyword, page}
             }));
+        },
+        onModify(item){
+            dispatch({
+                type:'users/showMask',
+                payload:{
+                    maskType:'modify',
+                    currentItem:item
+                }
+            });
+        },
+        onDel(id){
+            dispatch({
+                type:'users/del',
+                payload:id,
+            });
         }
     };
-    const userModalProps = {};
+    const userModalProps = {
+        item: maskType=='create'? {}:currentItem,
+        type: maskType,
+        visible: maskVisible,
+        onConfirm(data){
+            dispatch({
+                type:`users/${maskType}`,
+                payload: data
+            });
+        },
+        onCancel(){
+            dispatch({
+                type:'users/hideMask'
+            });
+        }
+    };
+
+    const UserModalGen = ()=>(<UserModal {...userModalProps}/>);
 
     return (
         <div className={normal}>
             <UserSearch {...userSearchProps}/>
             <UserList {...userListProps}/>
-            <UserModal {...userModalProps}/>
+            <UserModalGen />
         </div>
     );
 }
