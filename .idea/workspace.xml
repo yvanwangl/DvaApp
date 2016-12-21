@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7669674a-e877-449a-aa8e-1ec37d796df1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Users/UserSearch/UserSearch.jsx" afterPath="$PROJECT_DIR$/src/components/Users/UserSearch/UserSearch.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/Users/Users.jsx" afterPath="$PROJECT_DIR$/src/routes/Users/Users.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/users.js" afterPath="$PROJECT_DIR$/src/services/users.js" />
     </list>
     <ignored path="dva-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -498,7 +495,7 @@
       <workItem from="1482070024059" duration="186000" />
       <workItem from="1482144154633" duration="8615000" />
       <workItem from="1482241703266" duration="155000" />
-      <workItem from="1482315030591" duration="11250000" />
+      <workItem from="1482315030591" duration="11272000" />
     </task>
     <task id="LOCAL-00001" summary="modify styles">
       <created>1482070102720</created>
@@ -542,11 +539,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482328240675</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add modify method">
+      <created>1482328265297</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1482328265297</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29433000" />
+    <option name="totallyTimeSpent" value="29455000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -596,7 +600,8 @@
     <MESSAGE value="add pagination" />
     <MESSAGE value="add showMask" />
     <MESSAGE value="add create method" />
-    <option name="LAST_COMMIT_MESSAGE" value="add create method" />
+    <MESSAGE value="add modify method" />
+    <option name="LAST_COMMIT_MESSAGE" value="add modify method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
