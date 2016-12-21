@@ -1,5 +1,5 @@
 import { hashHistory } from 'dva/router';
-import { query } from '../services/users';
+import { query, create, modify, del } from '../services/users';
 import { parse } from 'qs';
 
 export default {
@@ -50,9 +50,46 @@ export default {
                 });
             }
         },
-        *create(){},
-        *modify(){},
-        *del(){},
+        *create({payload}, {call, put}){
+            yield put({ type:'hideMask' });
+            yield put({ type:'showLoading' });
+            const { data } = yield call(create, payload);
+            if(data&& data.success){
+                yield put({
+                    type:'createSuccess',
+                    payload: {
+                        list: data.data,
+                        total: data.page.total,
+                        current: data.page.current,
+                        field: '',
+                        keyword: '',
+                    }
+                });
+            }
+        },
+        *modify({payload}, { select, call, put }){
+            yield put({type:'hideMask'});
+            yield put({type:'showLoading'});
+            const id = yield select(({ users }) => users.currentItem.id);
+            const newUser = {...payload, id};
+            const { data } = yield call(modify, newUser);
+            if(data && data.success){
+                yield put({
+                    type:'modifySuccess',
+                    payload:newUser
+                });
+            }
+        },
+        *del({payload}, {call, put}){
+            yield put({ type:'showLoading' });
+            const { data } = yield call(del, {id:payload});
+            if(data&& data.success){
+                yield put({
+                    type:'delSuccess',
+                    payload,
+                });
+            }
+        },
     },
 
     reducers: {
@@ -74,9 +111,18 @@ export default {
         querySuccess(state, action){
             return {...state, ...action.payload, loading:false};
         },
-        createSuccess(){},
-        modifySuccess(){},
-        delSuccess(){},
+        createSuccess(state, action){
+            return {...state, ...action.payload, loading:false};
+        },
+        modifySuccess(state, action){
+            const updateUser = action.payload;
+            const newList = state.list.map(user=>user.id===updateUser.id?{...user,...updateUser}:user);
+            return {...state, list:newList, loading:false};
+        },
+        delSuccess(state, action){
+            const newList = state.list.filter(user=>user.id!==action.payload);
+            return {...state, list: newList, loading:false};
+        },
         updateQueryKey(state, action){
             return {...state, ...action.payload};
         },

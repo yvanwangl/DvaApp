@@ -7,6 +7,7 @@ const mockjs = require('mockjs');
 //数据持久对象
 let tableListData = {};
 const TOTAL = 100;
+const PAGESIZE = 10;
 if(!global[Symbol.for('tableListData')]){
     const data = mockjs.mock({
         [`data|${TOTAL}`]: [{
@@ -29,7 +30,7 @@ if(!global[Symbol.for('tableListData')]){
 module.exports = {
     'GET /api/users': function(req, res){
         const page = qs.parse(req.query);
-        const pageSize = page.pageSize || 10;
+        const pageSize = page.pageSize || PAGESIZE;
         const currentPage = page.page || 1;
 
         let data;
@@ -58,6 +59,53 @@ module.exports = {
             success:true,
             data: data,
             page: newPage
+        });
+    },
+    'POST /api/users':function (req, res){
+        const newData = qs.parse(req.body);
+
+        newData.id = tableListData.data.length+1;
+        tableListData.data.unshift(newData);
+        tableListData.page.total+=1;
+        tableListData.page.current = 1;
+
+        let data = tableListData.data.slice(0, PAGESIZE);
+
+        res.json({
+            success:true,
+            data: data,
+            page: tableListData.page
+        });
+        /*global[Symbol.for('tableListData')] = tableListData;*/
+    },
+
+    'PUT /api/users': function(req, res){
+        const newData = qs.parse(req.body);
+        tableListData.data = tableListData.data.map(function(data){
+            if(data.id == newData.id){
+                return newData;
+            }
+            return data;
+        });
+
+        res.json({
+            success:true,
+            data: tableListData.data,
+            page: tableListData.page
+        });
+    },
+
+    'DELETE /api/users': function(req, res){
+        const deleteItem = qs.parse(req.body);
+        tableListData.data = tableListData.data.filter(function(data){
+            return data.id!=deleteItem.id;
+        });
+        tableListData.page.total -= 1;
+
+        res.json({
+            success:true,
+            data: tableListData.data,
+            page: tableListData.page
         });
     },
 };
