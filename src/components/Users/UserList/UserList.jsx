@@ -7,7 +7,9 @@ const UserList = ({
     current,
     loading,
     dataSource,
-    onPageChange
+    onPageChange,
+    onModify,
+    onDel
 })=> {
     const columns = [
         {
@@ -31,11 +33,9 @@ const UserList = ({
             key: 'operation',
             render: (text, record)=>(
                 <p>
-                    <a onClick={()=> {
-                    }}>编辑</a>
+                    <a onClick={()=> onModify(record)}>编辑</a>
                     &nbsp;
-                    <Popconfirm title="Confirm to delete?" onConfirm={()=> {
-                    }}>
+                    <Popconfirm title="Confirm to delete?" onConfirm={()=> onDel(record.id)}>
                         <a>删除</a>
                     </Popconfirm>
                 </p>
@@ -72,6 +72,8 @@ const UserList = ({
 
 UserList.propTypes={
     onPageChange: PropTypes.func,
+    onModify: PropTypes.func,
+    onDel: PropTypes.func,
     dataSource: PropTypes.array,
     loading: PropTypes.any,
     total: PropTypes.any,
