@@ -50,7 +50,7 @@ const UserModal = ({
         onCancel,
     };
     return (
-        <Modal {...modalOpts}>
+        <Modal {...modalOpts} className={styles.modal}>
             <Form horizontal>
                 <FormItem label='姓名：' hasFeedback {...formItemLayout}>
                     {
