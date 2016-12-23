@@ -8,27 +8,27 @@ const mockjs = require('mockjs');
 let tableListData = {};
 const TOTAL = 100;
 const PAGESIZE = 10;
-if(!global[Symbol.for('tableListData')]){
+if (!global[Symbol.for('tableListData')]) {
     const data = mockjs.mock({
         [`data|${TOTAL}`]: [{
-            'id|+1':1,
+            'id|+1': 1,
             name: '@cname',
             'age|11-99': 1,
             address: '@region'
         }],
-        page:{
+        page: {
             total: TOTAL,
             current: 1
         }
     });
     tableListData = data;
     global[Symbol.for('tableListData')] = tableListData;
-}else {
+} else {
     tableListData = global[Symbol.for('tableListData')];
 }
 
 module.exports = {
-    'GET /api/users': function(req, res){
+    'GET /api/users': function (req, res) {
         const page = qs.parse(req.query);
         const pageSize = page.pageSize || PAGESIZE;
         const currentPage = page.page || 1;
@@ -38,16 +38,16 @@ module.exports = {
 
         let newData = [...tableListData.data];
 
-        if(page.field){
-            const d = newData.filter((item)=>item[page.field].indexOf(page.keyword)>-1);
-            data = d.slice((currentPage-1)*pageSize, currentPage*pageSize);
+        if (page.field) {
+            const d = newData.filter((item)=>item[page.field].indexOf(page.keyword) > -1);
+            data = d.slice((currentPage - 1) * pageSize, currentPage * pageSize);
             newPage = {
                 total: d.length,
-                current: currentPage*1
+                current: currentPage * 1
             };
-        }else {
-            data = tableListData.data.slice((currentPage-1)*pageSize, currentPage*pageSize);
-            tableListData.page.current = currentPage*1;
+        } else {
+            data = tableListData.data.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+            tableListData.page.current = currentPage * 1;
             newPage = {
                 current: tableListData.page.current,
                 total: tableListData.page.total
@@ -56,54 +56,54 @@ module.exports = {
 
 
         res.json({
-            success:true,
+            success: true,
             data: data,
             page: newPage
         });
     },
-    'POST /api/users':function (req, res){
+    'POST /api/users': function (req, res) {
         const newData = qs.parse(req.body);
 
-        newData.id = tableListData.data.length+1;
+        newData.id = tableListData.data.length + 1;
         tableListData.data.unshift(newData);
-        tableListData.page.total+=1;
+        tableListData.page.total += 1;
         tableListData.page.current = 1;
 
         let data = tableListData.data.slice(0, PAGESIZE);
 
         res.json({
-            success:true,
+            success: true,
             data: data,
             page: tableListData.page
         });
         /*global[Symbol.for('tableListData')] = tableListData;*/
     },
 
-    'PUT /api/users': function(req, res){
+    'PUT /api/users': function (req, res) {
         const newData = qs.parse(req.body);
-        tableListData.data = tableListData.data.map(function(data){
-            if(data.id == newData.id){
+        tableListData.data = tableListData.data.map(function (data) {
+            if (data.id == newData.id) {
                 return newData;
             }
             return data;
         });
 
         res.json({
-            success:true,
+            success: true,
             data: tableListData.data,
             page: tableListData.page
         });
     },
 
-    'DELETE /api/users': function(req, res){
+    'DELETE /api/users': function (req, res) {
         const deleteItem = qs.parse(req.body);
-        tableListData.data = tableListData.data.filter(function(data){
-            return data.id!=deleteItem.id;
+        tableListData.data = tableListData.data.filter(function (data) {
+            return data.id != deleteItem.id;
         });
         tableListData.page.total -= 1;
 
         res.json({
-            success:true,
+            success: true,
             data: tableListData.data,
             page: tableListData.page
         });
