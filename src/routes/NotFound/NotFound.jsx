@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styles from './index.css';
 
-const NotFound = ()=>{
+const NotFound = ()=> {
     return (
         <div className={styles.notFound}>
             你访问的浏览器被外星人劫持了:)
