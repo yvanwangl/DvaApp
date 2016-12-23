@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import { Menu } from 'antd';
+import {Menu} from 'antd';
 import NavLink from '../NavLink/NavLink';
 import styles from './index.css';
 
 const MenuItem = Menu.Item;
 
-function Header(){
+function Header() {
     return (
         <Menu mode='horizontal' theme="dark">
             <MenuItem key="home">
