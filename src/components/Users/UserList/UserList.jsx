@@ -70,7 +70,7 @@ const UserList = ({
     );
 };
 
-UserList.propTypes={
+UserList.propTypes = {
     onPageChange: PropTypes.func,
     onModify: PropTypes.func,
     onDel: PropTypes.func,

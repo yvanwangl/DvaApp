@@ -4,10 +4,10 @@ import styles from './index.css';
 
 const FormItem = Form.Item;
 const formItemLayout = {
-    labelCol:{
+    labelCol: {
         span: 6
     },
-    wrapperCol:{
+    wrapperCol: {
         span: 14
     }
 };
@@ -22,29 +22,29 @@ const UserModal = ({
         validateFields,
         getFieldsValue,
     }
-})=>{
+})=> {
     function handleConfirm() {
-        validateFields((errors)=>{
-            if(!!errors){
+        validateFields((errors)=> {
+            if (!!errors) {
                 return;
             }
-            let data = {...getFieldsValue(), key:item.key};
+            let data = {...getFieldsValue(), key: item.key};
             onConfirm(data);
         })
     }
 
     function checkNumber(rule, value, callback) {
-        if(!value){
+        if (!value) {
             callback(new Error("年龄未填写"));
-        }else if(!/^[\d]{1,2}$/.test(value)){
+        } else if (!/^[\d]{1,2}$/.test(value)) {
             callback(new Error("年龄不合法"));
-        }else {
+        } else {
             callback();
         }
     }
 
     const modalOpts = {
-        title:type=='create'?'新增用户':'修改用户',
+        title: type == 'create' ? '新增用户' : '修改用户',
         visible,
         onOk: handleConfirm,
         onCancel,
@@ -54,10 +54,10 @@ const UserModal = ({
             <Form horizontal>
                 <FormItem label='姓名：' hasFeedback {...formItemLayout}>
                     {
-                        getFieldDecorator('name',{
+                        getFieldDecorator('name', {
                             initialValue: item.name,
-                            rules:[
-                                {required:true, message:'名称未填写'}
+                            rules: [
+                                {required: true, message: '名称未填写'}
                             ]
                         })(
                             <Input type="text"/>
@@ -66,9 +66,9 @@ const UserModal = ({
                 </FormItem>
                 <FormItem label="年龄：" hasFeedback {...formItemLayout}>
                     {
-                        getFieldDecorator('age',{
+                        getFieldDecorator('age', {
                             initialValue: item.age,
-                            rules:[
+                            rules: [
                                 {validator: checkNumber}
                             ]
                         })(
@@ -78,10 +78,10 @@ const UserModal = ({
                 </FormItem>
                 <FormItem label='住址：' hasFeedback {...formItemLayout}>
                     {
-                        getFieldDecorator('address',{
+                        getFieldDecorator('address', {
                             initialValue: item.address,
-                            rules:[
-                                {required: true, message:'不能为空'}
+                            rules: [
+                                {required: true, message: '不能为空'}
                             ]
                         })(
                             <Input type="address"/>
