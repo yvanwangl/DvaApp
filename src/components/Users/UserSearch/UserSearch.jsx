@@ -14,11 +14,11 @@ const UserSearch = ({
         getFieldsValue,
         validateFields
     },
-})=>{
-    function onSubmit(e){
+})=> {
+    function onSubmit(e) {
         e.preventDefault();
-        validateFields((errors)=>{
-            if(!!errors){
+        validateFields((errors)=> {
+            if (!!errors) {
                 return;
             }
             onSearch(getFieldsValue());
@@ -43,14 +43,14 @@ const UserSearch = ({
                     </FormItem>
                     <FormItem>
                         {
-                            getFieldDecorator('keyword',{
+                            getFieldDecorator('keyword', {
                                 initialValue: keyword || ''
                             })(
                                 <Input type="text"/>
                             )
                         }
                     </FormItem>
-                    <Button style={{ marginRight:'10px' }} type="primary" htmlType='submit'>搜索</Button>
+                    <Button style={{marginRight: '10px'}} type="primary" htmlType='submit'>搜索</Button>
                 </Form>
             </div>
             <div className={styles.create}>
@@ -60,7 +60,7 @@ const UserSearch = ({
     );
 };
 
-UserSearch.propTypes={
+UserSearch.propTypes = {
     form: PropTypes.object.isRequired,
     onSearch: PropTypes.func,
     onAdd: PropTypes.func,
