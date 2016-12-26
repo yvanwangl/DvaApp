@@ -19,7 +19,7 @@ const UserSearch = ({
         e.preventDefault();
         validateFields((errors)=> {
             if (!!errors) {
-                return;
+                return false;
             }
             onSearch(getFieldsValue());
         })
@@ -50,7 +50,7 @@ const UserSearch = ({
                             )
                         }
                     </FormItem>
-                    <Button style={{marginRight: '10px'}} type="primary" htmlType='submit'>搜索</Button>
+                    <Button style={{marginRight: '20px'}} type="primary" htmlType='submit'>搜索</Button>
                 </Form>
             </div>
             <div className={styles.create}>
